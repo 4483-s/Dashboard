@@ -3,17 +3,27 @@ body {
   flex-wrap: wrap;
 }
 h2 {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
-  font-weight: 900;
+  padding-bottom: 1em;
 }
-div {
-  /* overflow-wrap: break-word; */
+p,
+h2,
+h3 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+h2,
+h3 {
+  font-weight: 900;
+  display: block;
+}
+h3 {
+  font-size: 1.15rem;
 }
 .sidebar {
   background-color: #1992d4;
   flex: 1 1 250px;
   height: 100vh;
+  padding-left: 1.5em;
   max-height: 100%;
 }
 .right {
@@ -21,15 +31,17 @@ div {
   min-width: 400px;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: minmax(18vh, 3fr) 10fr;
 }
 .main {
-  padding: 1em;
-  padding-top: 2em;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  gap: 1em;
   background-color: #e2e8f0;
+  padding: 1em;
+  padding-right: 1.5em;
+  padding-top: 2em;
   padding-bottom: 5%;
+  display: grid;
+  grid-template-columns: 7fr 2fr;
 }
 .header {
   background-color: #ffffff;
@@ -37,8 +49,8 @@ div {
   z-index: 1;
 }
 .mainleft {
-  display: grid;
-  grid-template-rows: 3em 1fr;
+  /* display: grid; */
+  /* grid-template-rows: 3em 1fr; */
 }
 .mainleft-grid {
   display: grid;
@@ -53,4 +65,31 @@ div {
   border-radius: 6px;
   min-height: 200px;
   border-left: 9px solid #f0b429;
+}
+.announcements,
+.trending {
+  /* padding: 1.5em; */
+}
+.announcements > div {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 1em;
+}
+.announcements > div > div,
+.trending > div {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  border-radius: 6px;
+}
+.announcements > div > div {
+  background-color: #e2e8e0;
+  gap: 2px;
+}
+.announcements > div > div > div {
+  background-color: #ffffff;
+  padding: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
